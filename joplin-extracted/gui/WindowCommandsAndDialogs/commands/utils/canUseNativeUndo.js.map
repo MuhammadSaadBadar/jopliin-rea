@@ -1,0 +1,1 @@
+{"version":3,"file":"canUseNativeUndo.js","sourceRoot":"","sources":["canUseNativeUndo.ts"],"names":[],"mappings":";;AAEA,gEAAgE;AAChE,aAAa;AACb,uDAAuD;AACvD,MAAM,gBAAgB,GAAG,CAAC,OAAsB,EAAE,EAAE;IACnD,MAAM,GAAG,GAAG,OAAO,CAAC,kBAAkB,EAAE,CAAC;IACzC,OAAO,CAAC,GAAG,CAAC,aAAa,CAAC,OAAO,CAAC,iCAAiC,CAAC,CAAC;AACtE,CAAC,CAAC;AAEF,kBAAe,gBAAgB,CAAC"}

@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Files exceeding GitHub's 100MB limit
+evidence-modules.json
+static_analysis_output.txt
+*.log
+
+# Temporary and build artifacts
+.vscode/
+scratch/

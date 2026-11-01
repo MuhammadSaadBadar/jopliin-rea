@@ -1,0 +1,1929 @@
+{
+  "rea_evidence_record": {
+    "evidence_id": "ev_d21ed3f45a8ac0d2d656b29fa5f5ca2a050326241016493db50ea1017825b96a",
+    "operation": "analyze_javascript_application",
+    "predicate_type": "rea.javascript-application-analysis",
+    "provider": {
+      "id": "rea-javascript-application",
+      "name": "REA JavaScript application analyzer",
+      "version": "1"
+    },
+    "subject": {
+      "name": "joplin-extracted",
+      "local_path": "C:\\Users\\HP\\Desktop\\SRE ASG 2\\joplin-extracted",
+      "format": "directory",
+      "digest": {
+        "sha256": "40529240375cb86f31230cef2bee45d218f28f61176563f1a33bb49cff64be2d"
+      }
+    },
+    "graph_summary": {
+      "schema": "JavaScriptApplicationGraph",
+      "total_nodes_analyzed": 15420,
+      "total_edges_mapped": 17368,
+      "inventory_manifest_id": "agm_814a16dc478dcbcf4d18f5427aae88176ca8139b665cef94ce92674342508aae"
+    },
+    "search_subsystem_evidence_nodes": [
+      {
+        "node_id": "jag_node_02414a7ebe72682fb1e4f2330d0a393e17bb908aef7c3a0f5d26bc17dc85abf6",
+        "kind": "javascript-module",
+        "identity": {
+          "strategy": "artifact-local-key",
+          "stability": "artifact-version",
+          "artifact_sha256": "a4415b78677013dfccdc00a68f108d74c369f06788728f7ad685aa67c9111c68",
+          "namespace": "unresolved-semantic-module",
+          "key": "external:@joplin/lib/reducer"
+        },
+        "observations": [
+          {
+            "label": "@joplin/lib/reducer",
+            "source_map_reference": null,
+            "properties": {
+              "semantic_role": "module-reference",
+              "declared_specifier": "@joplin/lib/reducer",
+              "resolution_status": "external"
+            },
+            "evidence": {
+              "authority": "static-relationship-inference",
+              "state": "inferred",
+              "confidence": "low",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_a4415b78677013dfccdc00a68f108d74c369f06788728f7ad685aa67c9111c68",
+                "sha256": "a4415b78677013dfccdc00a68f108d74c369f06788728f7ad685aa67c9111c68"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 17,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 19
+                  },
+                  "kind": "source-range",
+                  "source": "gui/MainLayoutPane.tsx"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "retain-unresolved-semantic-module",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [
+                "Cross-function mutation and dynamic property resolution remain unknown.",
+                "Local call, argument, return, and closure relations are static candidates and do not prove runtime invocation.",
+                "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+                "Return sites include only direct callable returns; nested callable returns remain separate.",
+                "Static syntax does not prove that this relationship executes at runtime.",
+                "Values and aliases were recovered from inert syntax only; no JavaScript was executed."
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_5aea6af285a2ce96a3d9b50707a1d8ce27b0035daea17afd02fb132a43313ce9",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_0ac75c71731d35b7d409f029222dbddda3ce943ac00d9b38880ad08533b412e3",
+        "kind": "javascript-asset",
+        "identity": {
+          "strategy": "content-digest",
+          "stability": "global-exact",
+          "sha256": "102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff"
+        },
+        "observations": [
+          {
+            "label": "gui/NoteListControls/commands/focusSearch.ts",
+            "source_map_reference": null,
+            "properties": {
+              "static_analysis": {
+                "parse_status": "complete",
+                "analysis_coverage": {
+                  "syntax": {
+                    "status": "complete",
+                    "error_count": 0
+                  },
+                  "semantics": {
+                    "unknown_findings": 0,
+                    "uncertainty": []
+                  },
+                  "examination": {
+                    "status": "complete",
+                    "semantic_resource_limits": [],
+                    "electron_call_paths_limited": false
+                  },
+                  "applicability": {
+                    "electron": "unknown"
+                  }
+                },
+                "routes": {
+                  "candidates": [],
+                  "unresolved": [],
+                  "capacity": null
+                },
+                "parse_error_count": 0,
+                "visited_ast_nodes": 73,
+                "references": [
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 1,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 89
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/CommandService",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 2,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 39
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/locale",
+                    "expression": null
+                  }
+                ],
+                "endpoints": [],
+                "storage": [],
+                "bundler_registrations": [],
+                "role_paths": [],
+                "source_map_urls": [],
+                "vendors": [],
+                "electron": {
+                  "browser_windows": [],
+                  "context_bridge_apis": [],
+                  "ipc": [],
+                  "sender_validations": [],
+                  "utility_processes": [],
+                  "native_addon_bindings": []
+                },
+                "limitations": [
+                  "JavaScript syntax was parsed as data and was never evaluated."
+                ]
+              },
+              "semantic_module_analysis": null,
+              "application_projection_failure": {
+                "code": "resource_constraint",
+                "category": "resource_constraint",
+                "message": "Expanded application relationships for gui/NoteListControls/commands/focusSearch.ts exceed the parent's result budget; complete static facts were retained on the file node",
+                "retryable": false,
+                "remediation": {
+                  "action": "Read the complete static facts on the file node or analyze fewer source files. Expanded application relationships exceed the parent result budget. This limit belongs to the parent result budget. That budget follows the parent V8 heap limit. Increasing max_heap_mb does not raise it. On Node, set NODE_OPTIONS (for example --max-old-space-size=<MiB>) in the environment that starts the CLI or MCP server, then restart that process, to raise the parent heap and this budget. Use the retained static facts or analyze fewer source files."
+                },
+                "details": {
+                  "operation": "analyze_javascript_application",
+                  "resource": "memory",
+                  "reason": "Expanded application relationships for gui/NoteListControls/commands/focusSearch.ts exceed the parent's result budget; complete static facts were retained on the file node",
+                  "reported_limits": {
+                    "parent_result_budget_bytes": 1957284984,
+                    "parent_available_result_budget_bytes": 0,
+                    "application_projection_required_bytes": 320576
+                  }
+                }
+              }
+            },
+            "evidence": {
+              "authority": "ast-static-analysis",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff",
+                "sha256": "102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 0
+                  },
+                  "kind": "source-range",
+                  "source": "gui/NoteListControls/commands/focusSearch.ts"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "retain-unexpanded-static-findings",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [
+                "Resource constraint during analyze_javascript_application: Expanded application relationships for gui/NoteListControls/commands/focusSearch.ts exceed the parent's result budget; complete static facts were retained on the file node"
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_171b047d281fb7931cc9f0da1acf261a99fbce01f7da3e57ba9664758fea8119",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          },
+          {
+            "label": "gui/NoteListControls/commands/focusSearch.ts",
+            "source_map_reference": null,
+            "properties": {
+              "file_occurrence": {
+                "container_sha256": "40529240375cb86f31230cef2bee45d218f28f61176563f1a33bb49cff64be2d",
+                "path": "gui/NoteListControls/commands/focusSearch.ts",
+                "sha256": "102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff"
+              },
+              "path": "gui/NoteListControls/commands/focusSearch.ts",
+              "bytes": 474,
+              "inventory_artifact_id": "art_06e05923c534fd5b5e497bc7930a6875d85e5396473cdcdc33cc5f2ccd27b4e0",
+              "unpacked": false,
+              "file_kind": "javascript",
+              "text_status": "included",
+              "parse_status": "complete",
+              "analysis_coverage": {
+                "syntax": {
+                  "status": "complete",
+                  "error_count": 0
+                },
+                "semantics": {
+                  "unknown_findings": 0,
+                  "uncertainty": []
+                },
+                "examination": {
+                  "status": "complete",
+                  "semantic_resource_limits": [],
+                  "electron_call_paths_limited": false
+                },
+                "applicability": {
+                  "electron": "unknown"
+                }
+              },
+              "json_parse_status": null,
+              "json_top_level_keys": [],
+              "omitted_json_top_level_keys": 0,
+              "vendor_markers": []
+            },
+            "evidence": {
+              "authority": "artifact-bytes",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff",
+                "sha256": "102c1c2a97d9f550bf4ca330bd833caa49ed28133a4c64fb52122d5cecba57ff"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "kind": "artifact-path",
+                  "path": "gui/NoteListControls/commands/focusSearch.ts"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "inventory-relevant-file",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_b1d0b4f42df79caf43cfbbb19d1be89a41095d5d7108ad638cedc562adc1893c",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_1352530099c0c1e86d0238dc1253fe4c3affd0bc46d7f0ab158170751c928a3e",
+        "kind": "javascript-asset",
+        "identity": {
+          "strategy": "content-digest",
+          "stability": "global-exact",
+          "sha256": "0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b"
+        },
+        "observations": [
+          {
+            "label": "gui/SearchBar/SearchBar.tsx",
+            "source_map_reference": null,
+            "properties": {
+              "file_occurrence": {
+                "container_sha256": "40529240375cb86f31230cef2bee45d218f28f61176563f1a33bb49cff64be2d",
+                "path": "gui/SearchBar/SearchBar.tsx",
+                "sha256": "0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b"
+              },
+              "path": "gui/SearchBar/SearchBar.tsx",
+              "bytes": 6502,
+              "inventory_artifact_id": "art_9a4c8e6e83f1e8e858e39530127f88af6d55e2607aea8a85ad56248b754f68e8",
+              "unpacked": false,
+              "file_kind": "javascript",
+              "text_status": "included",
+              "parse_status": "partial",
+              "analysis_coverage": {
+                "syntax": {
+                  "status": "complete",
+                  "error_count": 0
+                },
+                "semantics": {
+                  "unknown_findings": 8,
+                  "uncertainty": [
+                    "dynamic-findings",
+                    "returned-reference-widening"
+                  ]
+                },
+                "examination": {
+                  "status": "complete",
+                  "semantic_resource_limits": [],
+                  "electron_call_paths_limited": false
+                },
+                "applicability": {
+                  "electron": "unknown"
+                }
+              },
+              "json_parse_status": null,
+              "json_top_level_keys": [],
+              "omitted_json_top_level_keys": 0,
+              "vendor_markers": []
+            },
+            "evidence": {
+              "authority": "artifact-bytes",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b",
+                "sha256": "0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "kind": "artifact-path",
+                  "path": "gui/SearchBar/SearchBar.tsx"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "inventory-relevant-file",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_0a74522727b9bec3d2c1058f0146f03f604c8d88d2295dad6dbd1194dd6d73d6",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          },
+          {
+            "label": "gui/SearchBar/SearchBar.tsx",
+            "source_map_reference": null,
+            "properties": {
+              "static_analysis": {
+                "parse_status": "partial",
+                "analysis_coverage": {
+                  "syntax": {
+                    "status": "complete",
+                    "error_count": 0
+                  },
+                  "semantics": {
+                    "unknown_findings": 8,
+                    "uncertainty": [
+                      "dynamic-findings",
+                      "returned-reference-widening"
+                    ]
+                  },
+                  "examination": {
+                    "status": "complete",
+                    "semantic_resource_limits": [],
+                    "electron_call_paths_limited": false
+                  },
+                  "applicability": {
+                    "electron": "unknown"
+                  }
+                },
+                "routes": {
+                  "candidates": [],
+                  "unresolved": [],
+                  "capacity": null
+                },
+                "parse_error_count": 0,
+                "visited_ast_nodes": 765,
+                "references": [
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 1,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 31
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 2,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 33
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "redux",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 3,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 65
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 4,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 57
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../lib/SearchInput/SearchInput",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 5,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 49
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/models/Setting",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 6,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 49
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/reducer",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 7,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 46
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/BaseModel",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 8,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 36
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/uuid",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 9,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 38
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react-redux",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 10,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 43
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/models/Note",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 11,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 45
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../../app.reducer",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 12,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 61
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/utils/focusHandler",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 13,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 36
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "require('debounce')"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 14,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 39
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "styled-components",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 65,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 14
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setQuery('')"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 66,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 66,
+                        "column": 25
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setSearchStarted(false)"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 96,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 24
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setSearchStarted(true)"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 97,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 23
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setQuery(event.value)"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 130,
+                        "column": 3
+                      },
+                      "end": {
+                        "line": 130,
+                        "column": 25
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setSearchStarted(true)"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 166,
+                        "column": 3
+                      },
+                      "end": {
+                        "line": 174,
+                        "column": 5
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setQuery((previousQuery) => {\r\n\t\t\t\tif (props.globalQuery !== previousQuery) {\r\n\t\t\t\t\tif (props.globalQuery.length > 0) {\r\n\t\t\t\t\t\tsetSearchStarted(true);\r\n\t\t\t\t\t}\r\n\t\t\t\t\treturn props.globalQuery;\r\n\t\t\t\t}\r\n\t\t\t\treturn previousQuery;\r\n\t\t\t})"
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 169,
+                        "column": 6
+                      },
+                      "end": {
+                        "line": 169,
+                        "column": 28
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "require",
+                    "specifier": null,
+                    "expression": "setSearchStarted(true)"
+                  }
+                ],
+                "endpoints": [],
+                "storage": [],
+                "bundler_registrations": [],
+                "role_paths": [],
+                "source_map_urls": [],
+                "vendors": [],
+                "electron": {
+                  "browser_windows": [],
+                  "context_bridge_apis": [],
+                  "ipc": [],
+                  "sender_validations": [],
+                  "utility_processes": [],
+                  "native_addon_bindings": []
+                },
+                "limitations": [
+                  "Local returned-reference projections were conservatively widened; effects include additional source-local candidates.",
+                  "One or more static keys, expressions, or Electron boundary values were dynamic and remain unknown.",
+                  "JavaScript syntax was parsed as data and was never evaluated."
+                ]
+              },
+              "semantic_module_analysis": null,
+              "application_projection_failure": {
+                "code": "resource_constraint",
+                "category": "resource_constraint",
+                "message": "Expanded application relationships for gui/SearchBar/SearchBar.tsx exceed the parent's result budget; complete static facts were retained on the file node",
+                "retryable": false,
+                "remediation": {
+                  "action": "Read the complete static facts on the file node or analyze fewer source files. Expanded application relationships exceed the parent result budget. This limit belongs to the parent result budget. That budget follows the parent V8 heap limit. Increasing max_heap_mb does not raise it. On Node, set NODE_OPTIONS (for example --max-old-space-size=<MiB>) in the environment that starts the CLI or MCP server, then restart that process, to raise the parent heap and this budget. Use the retained static facts or analyze fewer source files."
+                },
+                "details": {
+                  "operation": "analyze_javascript_application",
+                  "resource": "memory",
+                  "reason": "Expanded application relationships for gui/SearchBar/SearchBar.tsx exceed the parent's result budget; complete static facts were retained on the file node",
+                  "reported_limits": {
+                    "parent_result_budget_bytes": 1957284984,
+                    "parent_available_result_budget_bytes": 0,
+                    "application_projection_required_bytes": 3062208
+                  }
+                }
+              }
+            },
+            "evidence": {
+              "authority": "ast-static-analysis",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b",
+                "sha256": "0d8c3513d4ef2350cb71db23a9b476f59dafe1ae55e02fa64f0c62df6334092b"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 219,
+                    "column": 0
+                  },
+                  "kind": "source-range",
+                  "source": "gui/SearchBar/SearchBar.tsx"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "retain-unexpanded-static-findings",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "partial",
+                "truncated": false,
+                "omitted_count": null,
+                "limits": []
+              },
+              "limitations": [
+                "AST coverage is incomplete; omitted or dynamic facts must not be interpreted as absence.",
+                "Resource constraint during analyze_javascript_application: Expanded application relationships for gui/SearchBar/SearchBar.tsx exceed the parent's result budget; complete static facts were retained on the file node"
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_eed3098a9a73a7f52d59ed52404c9f7441b32f965857d6a3659a5b07ad924fda",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_17a0ed92bea178dde70f32456c0059bc0f783661ad95cb241920791c66878483",
+        "kind": "javascript-module",
+        "identity": {
+          "strategy": "artifact-local-key",
+          "stability": "artifact-version",
+          "artifact_sha256": "9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f",
+          "namespace": "unresolved-reference",
+          "key": "require:@joplin/lib/services/search/SearchEngine"
+        },
+        "observations": [
+          {
+            "label": "@joplin/lib/services/search/SearchEngine",
+            "source_map_reference": null,
+            "properties": {
+              "reference_kind": "require",
+              "specifier": "@joplin/lib/services/search/SearchEngine",
+              "expression": null,
+              "resolution": "unresolved",
+              "resolution_status": "external"
+            },
+            "evidence": {
+              "authority": "static-relationship-inference",
+              "state": "inferred",
+              "confidence": "low",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f",
+                "sha256": "9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 93,
+                    "column": 39
+                  },
+                  "end": {
+                    "line": 93,
+                    "column": 90
+                  },
+                  "kind": "source-range",
+                  "source": "app.js"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "resolve-static-reference",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "partial",
+                "truncated": false,
+                "omitted_count": null,
+                "limits": []
+              },
+              "limitations": [
+                "No matching bare package was inventoried in an enclosing node_modules directory.",
+                "Static syntax does not prove that this relationship executes at runtime.",
+                "The static reference could not be resolved within the inventoried artifact."
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_9a5270a8c3d8715e1477d1e5b17dce6173dce9d2f6013d029beea326f0722df5",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_221da4a57381251936aff6d698ae7c803877145f11bd5086fcd54fbf3131820a",
+        "kind": "javascript-module",
+        "identity": {
+          "strategy": "artifact-local-key",
+          "stability": "artifact-version",
+          "artifact_sha256": "9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f",
+          "namespace": "unresolved-semantic-module",
+          "key": "external:@joplin/lib/BaseApplication"
+        },
+        "observations": [
+          {
+            "label": "@joplin/lib/BaseApplication",
+            "source_map_reference": null,
+            "properties": {
+              "semantic_role": "module-reference",
+              "declared_specifier": "@joplin/lib/BaseApplication",
+              "resolution_status": "external"
+            },
+            "evidence": {
+              "authority": "static-relationship-inference",
+              "state": "inferred",
+              "confidence": "low",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f",
+                "sha256": "9742546fcc5387d7eb4373bbe6eff9391bc23d6c32d2ef466fdab1206489bd7f"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 52,
+                    "column": 42
+                  },
+                  "end": {
+                    "line": 52,
+                    "column": 80
+                  },
+                  "kind": "source-range",
+                  "source": "app.js"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "retain-unresolved-semantic-module",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [
+                "Cross-function mutation and dynamic property resolution remain unknown.",
+                "Local call, argument, return, and closure relations are static candidates and do not prove runtime invocation.",
+                "Promise ownership covers explicit unshadowed Promise construction, static factories, aggregation, chaining, and await syntax only.",
+                "Return sites include only direct callable returns; nested callable returns remain separate.",
+                "Static syntax does not prove that this relationship executes at runtime.",
+                "Values and aliases were recovered from inert syntax only; no JavaScript was executed."
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_362ef4709895d1692ea9987dbc0c00a4e6cd882c8c679033bbdeaabd4c0c6ff8",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_30f1d6b9cdeab9e5898df18eadb65c03365dc8033b6cea6a22b75ba44c218273",
+        "kind": "javascript-asset",
+        "identity": {
+          "strategy": "content-digest",
+          "stability": "global-exact",
+          "sha256": "717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271"
+        },
+        "observations": [
+          {
+            "label": "gui/NoteList/NoteList2.tsx",
+            "source_map_reference": null,
+            "properties": {
+              "file_occurrence": {
+                "container_sha256": "40529240375cb86f31230cef2bee45d218f28f61176563f1a33bb49cff64be2d",
+                "path": "gui/NoteList/NoteList2.tsx",
+                "sha256": "717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271"
+              },
+              "path": "gui/NoteList/NoteList2.tsx",
+              "bytes": 13354,
+              "inventory_artifact_id": "art_4aa48e2f82e9a66633ab0508e871cb614be21e767c39f94feccaee5c76dd39dd",
+              "unpacked": false,
+              "file_kind": "javascript",
+              "text_status": "included",
+              "parse_status": "complete",
+              "analysis_coverage": {
+                "syntax": {
+                  "status": "complete",
+                  "error_count": 0
+                },
+                "semantics": {
+                  "unknown_findings": 0,
+                  "uncertainty": []
+                },
+                "examination": {
+                  "status": "complete",
+                  "semantic_resource_limits": [],
+                  "electron_call_paths_limited": false
+                },
+                "applicability": {
+                  "electron": "unknown"
+                }
+              },
+              "json_parse_status": null,
+              "json_top_level_keys": [],
+              "omitted_json_top_level_keys": 0,
+              "vendor_markers": []
+            },
+            "evidence": {
+              "authority": "artifact-bytes",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271",
+                "sha256": "717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "kind": "artifact-path",
+                  "path": "gui/NoteList/NoteList2.tsx"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "inventory-relevant-file",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_668ef5f92943469e34aae92a0e001c7b6bd24c791903c328cb33078bc31392f5",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          },
+          {
+            "label": "gui/NoteList/NoteList2.tsx",
+            "source_map_reference": null,
+            "properties": {
+              "static_analysis": {
+                "parse_status": "complete",
+                "analysis_coverage": {
+                  "syntax": {
+                    "status": "complete",
+                    "error_count": 0
+                  },
+                  "semantics": {
+                    "unknown_findings": 0,
+                    "uncertainty": []
+                  },
+                  "examination": {
+                    "status": "complete",
+                    "semantic_resource_limits": [],
+                    "electron_call_paths_limited": false
+                  },
+                  "applicability": {
+                    "electron": "unknown"
+                  }
+                },
+                "routes": {
+                  "candidates": [],
+                  "unresolved": [],
+                  "capacity": null
+                },
+                "parse_error_count": 0,
+                "visited_ast_nodes": 1627,
+                "references": [
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 1,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 31
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 2,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 64
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 3,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 45
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../../app.reducer",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 4,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 61
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/BaseModel",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 5,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 38
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/types",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 6,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 73
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/plugins/api/noteListType",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 7,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 82
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/models/utils/readOnly",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 8,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 67
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/database/types",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 9,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 55
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/models/ItemChange",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 10,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 43
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/utils/types",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 11,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 56
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../NoteListItem/NoteListItem",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 12,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 44
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useItemCss",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 13,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 70
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../NoteListItem/utils/useOnContextMenu",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 14,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 54
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useVisibleRange",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 15,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 42
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useScroll",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 16,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 48
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useFocusNote",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 17,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 52
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useOnNoteClick",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 18,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 46
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useMoveNote",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 19,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 48
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useOnKeyDown",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 20,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 72
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./commands/focusElementNoteList",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 21,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 65
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/CommandService",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 22,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 52
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useDragAndDrop",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 23,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 59
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/trash",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 24,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 97
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/components/shared/NoteList/getEmptyFolderMessage",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 25,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 47
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/models/Folder",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 26,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 39
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/locale",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 27,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 66
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useActiveDescendantId",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 28,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 94
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "../NoteListItem/utils/getNoteElementIdFromJoplinId",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 29,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 29,
+                        "column": 54
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useFocusVisible",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 30,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 49
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/reducer",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 31,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 38
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "react-redux",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 32,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 64
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useOnNoteDoubleClick",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 33,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 42
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "reselect",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 34,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 82
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "@joplin/lib/services/share/reducer",
+                    "expression": null
+                  },
+                  {
+                    "module_key": null,
+                    "location": {
+                      "start": {
+                        "line": 35,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 50
+                      }
+                    },
+                    "operation": "load",
+                    "kind": "static-import",
+                    "specifier": "./utils/useAutoScroll",
+                    "expression": null
+                  }
+                ],
+                "endpoints": [],
+                "storage": [],
+                "bundler_registrations": [],
+                "role_paths": [],
+                "source_map_urls": [],
+                "vendors": [],
+                "electron": {
+                  "browser_windows": [],
+                  "context_bridge_apis": [],
+                  "ipc": [],
+                  "sender_validations": [],
+                  "utility_processes": [],
+                  "native_addon_bindings": []
+                },
+                "limitations": [
+                  "JavaScript syntax was parsed as data and was never evaluated."
+                ]
+              },
+              "semantic_module_analysis": null,
+              "application_projection_failure": {
+                "code": "resource_constraint",
+                "category": "resource_constraint",
+                "message": "Expanded application relationships for gui/NoteList/NoteList2.tsx exceed the parent's result budget; complete static facts were retained on the file node",
+                "retryable": false,
+                "remediation": {
+                  "action": "Read the complete static facts on the file node or analyze fewer source files. Expanded application relationships exceed the parent result budget. This limit belongs to the parent result budget. That budget follows the parent V8 heap limit. Increasing max_heap_mb does not raise it. On Node, set NODE_OPTIONS (for example --max-old-space-size=<MiB>) in the environment that starts the CLI or MCP server, then restart that process, to raise the parent heap and this budget. Use the retained static facts or analyze fewer source files."
+                },
+                "details": {
+                  "operation": "analyze_javascript_application",
+                  "resource": "memory",
+                  "reason": "Expanded application relationships for gui/NoteList/NoteList2.tsx exceed the parent's result budget; complete static facts were retained on the file node",
+                  "reported_limits": {
+                    "parent_result_budget_bytes": 1957284984,
+                    "parent_available_result_budget_bytes": 0,
+                    "application_projection_required_bytes": 5060512
+                  }
+                }
+              }
+            },
+            "evidence": {
+              "authority": "ast-static-analysis",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271",
+                "sha256": "717aca5e03d1b0ad249e26aac146e2790d74cd97507ba0ba19d844d13dd2b271"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 374,
+                    "column": 0
+                  },
+                  "kind": "source-range",
+                  "source": "gui/NoteList/NoteList2.tsx"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "retain-unexpanded-static-findings",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [
+                "Resource constraint during analyze_javascript_application: Expanded application relationships for gui/NoteList/NoteList2.tsx exceed the parent's result budget; complete static facts were retained on the file node"
+              ],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_a27b91fcce29fcc5826789201d53c276b8f8f7633848143a4fdadc6a7fe296fa",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "jag_node_4d887f7da127098aefdcad562204dd73449e0b2fcbe7cb2d4f53bd35c428d125",
+        "kind": "source-module",
+        "identity": {
+          "strategy": "source-map-original",
+          "stability": "source-map-exact",
+          "source_map_sha256": "a83594735c8900fd1941fd8c07ca5205f0107db14b31c0ae0667c308da1c2f9e",
+          "original_source": "SearchBar.tsx",
+          "source_root": "",
+          "source_sha256": null
+        },
+        "observations": [
+          {
+            "label": "SearchBar.tsx",
+            "source_map_reference": {
+              "source_name": "SearchBar.tsx",
+              "source_root": "",
+              "map_path": "gui/SearchBar/SearchBar.js.map",
+              "resolution": {
+                "kind": "suffix",
+                "path": "SearchBar.tsx"
+              }
+            },
+            "properties": {
+              "section_path": [],
+              "source_index": 0,
+              "declaration_index": 0,
+              "source_name_available": true,
+              "content_available": false,
+              "content_sha256": null
+            },
+            "evidence": {
+              "authority": "artifact-bytes",
+              "state": "observed",
+              "confidence": "exact",
+              "artifact": {
+                "available": true,
+                "artifact_id": "art_a83594735c8900fd1941fd8c07ca5205f0107db14b31c0ae0667c308da1c2f9e",
+                "sha256": "a83594735c8900fd1941fd8c07ca5205f0107db14b31c0ae0667c308da1c2f9e"
+              },
+              "location": {
+                "available": true,
+                "value": {
+                  "kind": "artifact-path",
+                  "path": "gui/SearchBar/SearchBar.js.map"
+                }
+              },
+              "extractor": {
+                "name": "rea-javascript-artifact-reconstruction",
+                "version": "1",
+                "operation": "parse-local-source-map",
+                "executable_sha256": null
+              },
+              "coverage": {
+                "status": "complete",
+                "truncated": false,
+                "omitted_count": 0,
+                "limits": []
+              },
+              "limitations": [],
+              "evidence_ids": []
+            },
+            "observation_id": "jag_observation_5babafa5322a532e59b84514d36002b0fc7cf0d512621564202446d207fa075b",
+            "identifier_strategy": {
+              "strategy": "semantic-content-sha256",
+              "stability": "observation-exact"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

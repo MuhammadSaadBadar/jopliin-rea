@@ -1,0 +1,44 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = require("react");
+// Syncs whether dialogs are open/closed with the global reducer state.
+const useSyncDialogState = (dialogState, dispatch) => {
+    const lastDialogStateRef = (0, react_1.useRef)(dialogState);
+    (0, react_1.useEffect)(() => {
+        const prevState = lastDialogStateRef.current;
+        const state = dialogState;
+        if (state.notePropertiesDialogOptions !== prevState.notePropertiesDialogOptions) {
+            dispatch({
+                type: state.notePropertiesDialogOptions && state.notePropertiesDialogOptions.visible ? 'VISIBLE_DIALOGS_ADD' : 'VISIBLE_DIALOGS_REMOVE',
+                name: 'noteProperties',
+            });
+        }
+        if (state.noteContentPropertiesDialogOptions !== prevState.noteContentPropertiesDialogOptions) {
+            dispatch({
+                type: state.noteContentPropertiesDialogOptions && state.noteContentPropertiesDialogOptions.visible ? 'VISIBLE_DIALOGS_ADD' : 'VISIBLE_DIALOGS_REMOVE',
+                name: 'noteContentProperties',
+            });
+        }
+        if (state.shareNoteDialogOptions !== prevState.shareNoteDialogOptions) {
+            dispatch({
+                type: state.shareNoteDialogOptions && state.shareNoteDialogOptions.visible ? 'VISIBLE_DIALOGS_ADD' : 'VISIBLE_DIALOGS_REMOVE',
+                name: 'shareNote',
+            });
+        }
+        if (state.shareFolderDialogOptions !== prevState.shareFolderDialogOptions) {
+            dispatch({
+                type: state.shareFolderDialogOptions && state.shareFolderDialogOptions.visible ? 'VISIBLE_DIALOGS_ADD' : 'VISIBLE_DIALOGS_REMOVE',
+                name: 'shareFolder',
+            });
+        }
+        if (state.publishFolderDialogOptions !== prevState.publishFolderDialogOptions) {
+            dispatch({
+                type: state.publishFolderDialogOptions && state.publishFolderDialogOptions.visible ? 'VISIBLE_DIALOGS_ADD' : 'VISIBLE_DIALOGS_REMOVE',
+                name: 'publishFolder',
+            });
+        }
+        lastDialogStateRef.current = dialogState;
+    }, [dialogState, dispatch]);
+};
+exports.default = useSyncDialogState;
+//# sourceMappingURL=useSyncDialogState.js.map
